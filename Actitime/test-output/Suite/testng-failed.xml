@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <parameter name="url" value="http://localhost/login.do"/>
+  <test thread-count="5" parallel="tests" name="TestA(failed)">
+    <parameter name="un" value="admin"/>
+    <parameter name="pwd" value="manager"/>
+    <classes>
+      <class name="com.actitime.testscript.LearnDataDrivenTesting">
+        <methods>
+          <include name="demoA" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.actitime.testscript.LearnDataDrivenTesting -->
+    </classes>
+  </test> <!-- TestA(failed) -->
+  <test thread-count="5" parallel="tests" name="TestB(failed)">
+    <parameter name="un" value="nasrin"/>
+    <parameter name="pwd" value="12345"/>
+    <classes>
+      <class name="com.actitime.testscript.LearnDataDrivenTesting">
+        <methods>
+          <include name="demoA" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.actitime.testscript.LearnDataDrivenTesting -->
+    </classes>
+  </test> <!-- TestB(failed) -->
+</suite> <!-- Failed suite [Suite] -->
